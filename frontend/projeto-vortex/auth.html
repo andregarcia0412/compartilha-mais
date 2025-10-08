@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticação</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="no-transitions hidden">
+    
+    <main class="container">
+        <div class="sign-in-up">
+            <button id="mobile-sign-in">Entrar</button>
+            <button id="mobile-sign-up">Cadastrar</button>
+        </div>
+        <div class="sign-in">
+            <h1>Entrar</h1>
+            <div class="inputs">
+                <input type="email" autocomplete="email" placeholder="Email" id="sign-in-email" required>
+                <div class="password-input">
+                    <input autocomplete="current-password" type="password" placeholder="Senha" id="sign-in-password" class="password-field" required>
+                    <img id="sign-in-eye-btn" class="eye-btn" src="view.png">
+                </div>
+                <p id="sign-in-error"></p>
+                <button id="sign-in-btn">Entrar</button>
+            </div>
+        </div>
+        
+        <div class="toggle-container">
+            <h1 id="toggle-container-h1">Olá!</h1>
+            <h3 id="toggle-container-h3">Ainda não tem uma conta? Cadastre-se para usar o website</h3>
+            <button id="toggle-container-button">Cadastre-se</button>
+        </div>
+
+        <div class="register">
+            <h1>Cadastre-se</h1>
+            <div class="inputs">
+                <input autocomplete="name" type="text" placeholder="Nome" id="register-name" required>
+                <input autocomplete="email" type="email" placeholder="Email" id="register-email" required>
+                <div class="password-input">
+                    <input autocomplete="new-password" type="password" placeholder="Senha" id="register-password" class ="password-field" required>
+                    <img id="register-eye-btn" class="eye-btn" src="view.png">
+                </div>
+                <p id="register-error"></p>
+                <button id="register-btn">Cadastre-se</button>
+            </div>
+        </div>
+
+    </main>
+    
+    <script type="module" src="src/auth.js"></script>
+</body>
+</html>

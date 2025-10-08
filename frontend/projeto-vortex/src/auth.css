@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+body{
+    background-color: #C9D6FF;
+    background: linear-gradient(to right, #E2E2E2, #C9D6FF);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+button{
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #512DA8;
+    color: #F2F2F2;
+    font-size: 16px;
+    padding: 12px 20px 12px 20px;
+    width: 200px;
+    transition: background-color 0.2s linear;
+}
+
+button:hover{
+    background-color: #402080;
+}
+
+input{
+    border: none;
+    background-color: #DDD;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 250px;
+    outline: none;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #F2F2F2;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0 0.35);
+    height: 600px;
+    width: 1000px;
+    min-height: 600px;
+}
+
+.sign-in{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.sign-in button, .register button{
+    width: 250px;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.toggle-container{
+    position: absolute;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    background-color: #512DA8;
+    color: #FFF;
+    background: linear-gradient(to right, #5C4BC0, #512DA8);
+    border-radius: 30px;
+    transition: all 0.6s ease-in-out;
+    z-index: 1;
+}
+
+.transition{
+    transform: translateX(-100%);
+}
+
+.toggle-container button{
+    background: none;
+    border: 1px solid #F2F2F2;
+}
+
+.toggle-container button:hover{
+    background-color: #6745C2;
+}
+
+.toggle-container h1, .toggle-container h3, .toggle-container button{
+    transition: opacity 0.3s ease;
+}
+
+.content-hidden{
+    opacity: 0;
+}
+
+.toggle-container h3{
+    margin: 20px 40px 20px 40px;
+    flex-wrap: wrap;
+}
+
+.register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.sign-in-up{
+    display: none;
+}
+
+.hidden{
+    display: none;
+}
+
+#register-error, #sign-in-error{
+    display: none;
+    font-size: 14px;
+    color: #FF0000;
+}
+
+.no-transitions *{
+    transition: none !important;
+}
+
+body .page-ready{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease;
+}
+
+.password-input{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eye-btn{
+    left: 85%;
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+@media(max-width: 1000px){
+    body{
+        height: auto;
+        padding: 20px;
+    }
+
+    .container{
+        flex-direction: column;
+        width: 100%;
+        flex-wrap: wrap;
+        height: 600px;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .sign-in-up{
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .sign-in-up button{
+        background: none;
+        flex: 1;
+        color: #000;
+        border-bottom: 1px solid #CCC;
+        border-radius: 0;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .sign-in-up button .clicked{
+        border-color: #000;
+    }
+
+    .toggle-container{
+        display: none;
+    }
+
+
+}
