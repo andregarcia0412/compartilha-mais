@@ -62,11 +62,11 @@ Spring Boot oferece rápida configuração de APIs REST e integração com Java,
 
 ### 2️⃣ Usando JAR
 
-1. Baixe a última versão do JAR nas [releases do projeto](https://github.com/andregarcia0412/compartilha-mais/releases)
+1. Baixe a última versão do JAR nas [releases do projeto](https://github.com/andregarcia0412/compartilha-mais/releases/tag/v1.0.0)
 
 2. Execute o JAR no terminal:
     ```
-    java -jar compartilha-mais-x.y.z.jar
+    java -jar vortex-project-0.0.1-SNAPSHOT.jar
     ```
 
 # 🌐 Frontend
