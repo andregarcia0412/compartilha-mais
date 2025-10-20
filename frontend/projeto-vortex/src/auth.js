@@ -141,7 +141,7 @@ async function register() {
         registerErrorP.style.display = "none"
     }
 
-    const response = await fetch("http://localhost:8080/user", {
+    const response = await fetch(import.meta.env.VITE_API_URL, {
         method: 'POST',
         headers:{
             'Content-Type': 'application/json'
@@ -177,7 +177,7 @@ async function signIn() {
         signInErrorP.style.display = "none"
     }
 
-    const response = await fetch("http://localhost:8080/user/login", {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/login`, {
         method: 'POST',
         headers:{
             'Content-Type': 'application/json'

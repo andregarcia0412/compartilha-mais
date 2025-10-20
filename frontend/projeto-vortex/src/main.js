@@ -1,7 +1,7 @@
 import "../src/main.css"
 
 async function loadPage(){
-    const response = await fetch("http://localhost:8080/user/me", {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/me`, {
         method:'GET',
         credentials:'include'
     })
@@ -26,7 +26,7 @@ async function loadPage(){
 }
 
 async function logout(){
-    await fetch("http://localhost:8080/user/logout", {
+    await fetch(`${import.meta.env.VITE_API_URL}/logout`, {
         method:'POST',
         credentials:'include'
     })
