@@ -1,9 +1,10 @@
 [phases.setup]
-nixPkgs = ["jdk17", "maven"]
+nixPkgs = ["jdk21", "maven"]
+
 
 [build]
 builder = "nixpacks"
-buildCommand = "chmod +x backend/mvnw && ./backend/mvnw -f backend/pom.xml clean package -DskipTests"
+buildCommand = "chmod +x backend/mvnw && export JAVA_HOME=$(dirname $(dirname $(which java))) && ./backend/mvnw -f backend/pom.xml clean package -DskipTests"
 
 [deploy]
 startCommand = "cd backend && java -jar target/*.jar"
